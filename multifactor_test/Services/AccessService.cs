@@ -13,6 +13,7 @@ namespace multifactor_test.Services
             if (accessRegistry.TryGetValue(resource, out var context))
             {
                 context.ActionType = actionType;
+                // Зачем перезаписывается resource на то же самое значение?
                 context.Resource = resource;
             }
             else
